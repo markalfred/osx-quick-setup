@@ -82,6 +82,9 @@ fonts=(
 
 brew cask install ${fonts[@]}
 
+echo "===> Setting up OSX..."
+./osx-for-hackers.sh
+
 echo "===> Cloning dotfile config..."
 hub clone markalfred/dotfiles ~/Repos/dotfiles
 
