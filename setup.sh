@@ -21,6 +21,7 @@ brewbins=(
   python
   rbenv
   ruby-build
+  tig
 )
 
 echo "===> Installing brew binaries..."
@@ -36,6 +37,7 @@ npmbins=(
   coffee-script
   eslint
   eslint-plugin-react
+  mocha
   nesh
   pullr
   roots
