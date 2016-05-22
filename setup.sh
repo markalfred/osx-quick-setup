@@ -96,4 +96,8 @@ hub clone markalfred/dotfiles ~/Repos/dotfiles
 echo "===> Symlinking config files..."
 ~/Repos/dotfiles/create_symlinks.sh
 
+echo "===> Setting fish as your shell..."
+sudo sh -c "echo '/usr/local/bin/fish' >> /etc/shells"
+chsh -s /usr/local/bin/fish
+
 echo "Done. Reboot, imo."
