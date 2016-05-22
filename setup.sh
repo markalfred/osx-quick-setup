@@ -5,7 +5,9 @@
 set -e
 
 echo "===> Installing Homebrew..."
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+command -v brew >/dev/null 2>&1 || {
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+}
 brew doctor
 brew update
 
