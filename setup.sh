@@ -51,6 +51,7 @@ npm install -g ${npmbins[@]}
 
 echo "===> Installing brew cask..."
 brew install caskroom/cask/brew-cask
+brew tap caskroom/versions
 
 apps=(
   avocode
