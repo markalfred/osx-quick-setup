@@ -100,4 +100,8 @@ echo "===> Setting fish as your shell..."
 sudo sh -c "echo '/usr/local/bin/fish' >> /etc/shells"
 chsh -s /usr/local/bin/fish
 
+echo "===> Paste package control install into Sublime console..."
+open "https://packagecontrol.io/installation"
+subl
+
 echo "Done. Reboot, imo."
