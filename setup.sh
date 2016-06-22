@@ -76,6 +76,8 @@ apps=(
   transmit
   vlc
   zeplin
+  android-studio
+  java
 )
 
 echo "===> Cask installing apps..."
