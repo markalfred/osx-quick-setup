@@ -22,6 +22,8 @@ brewbins=(
   python
   rbenv
   ruby-build
+  tmux
+  reattach-to-user-namespace
 )
 
 echo "===> Installing brew binaries..."
@@ -48,6 +50,9 @@ npmbins=(
 
 echo "===> Installing NPM binaries..."
 npm install -g ${npmbins[@]}
+
+echo "===> Installing manual-install binaries..."
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "===> Installing brew cask..."
 brew install caskroom/cask/brew-cask
