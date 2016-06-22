@@ -12,16 +12,16 @@ brew doctor
 brew update
 
 brewbins=(
-  direnv
   fish
+  direnv
   git
   hub
+  tig
   n
   node
   python
   rbenv
   ruby-build
-  tig
 )
 
 echo "===> Installing brew binaries..."
