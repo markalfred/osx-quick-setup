@@ -15,15 +15,32 @@ brewbins=(
   fish
   direnv
   git
-  hub
+  # hub
+  gh
   tig
-  n
-  node
-  python
-  rbenv
-  ruby-build
   tmux
-  reattach-to-user-namespace
+
+  # n
+  # node
+  # python
+  # rbenv
+  # ruby-build
+  asdf
+
+  awscli
+  heroku
+
+  autoconf
+  automake
+  coreutils
+  openssl
+  readline
+  watchman
+
+  ffmpeg
+  prettyping
+  speedtest-cli
+  terminal-notifier
 )
 
 echo "===> Installing brew binaries..."
@@ -36,14 +53,11 @@ npm install -g npm
 npmbins=(
   babel-eslint
   chromedriver
-  coffee-script
   eslint
   eslint-plugin-react
   mocha
   nesh
-  pullr
-  roots
-  stylus
+  prettier
   typescript
   webpack
 )
@@ -58,30 +72,30 @@ echo "===> Installing brew cask..."
 brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
 
-apps=(
-  avocode
-  dash
-  dropbox
-  firefox
-  flux
-  google-chrome
-  iterm2
-  postgres
-  sketch
-  slack
-  slate
-  spotify
-  sublime-text3
-  torbrowser
-  transmit
-  vlc
-  zeplin
-  android-studio
-  java
-)
+# apps=(
+#   avocode
+#   dash
+#   dropbox
+#   firefox
+#   flux
+#   google-chrome
+#   iterm2
+#   postgres
+#   sketch
+#   slack
+#   slate
+#   spotify
+#   sublime-text3
+#   torbrowser
+#   transmit
+#   vlc
+#   zeplin
+#   android-studio
+#   java
+# )
 
-echo "===> Cask installing apps..."
-brew cask install --appdir="/Applications" ${apps[@]}
+# echo "===> Cask installing apps..."
+# brew cask install --appdir="/Applications" ${apps[@]}
 
 echo "===> Installing fonts..."
 brew tap caskroom/fonts
@@ -89,7 +103,10 @@ brew tap caskroom/fonts
 fonts=(
   font-anonymous-pro
   font-cousine
+  font-fira-code
   font-lekton
+  font-open-sans
+  font-roboto
 )
 
 brew cask install ${fonts[@]}
