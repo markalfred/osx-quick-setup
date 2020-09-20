@@ -1,4 +1,6 @@
 #!/bin/sh
+echo "===> Installing xcode developer tools..."
+xcode-select --install
 
 echo "===> Generating new SSH key..."
 echo ""
