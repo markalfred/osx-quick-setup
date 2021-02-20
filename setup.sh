@@ -15,17 +15,19 @@ brewbins=(
   fish
   direnv
   git
-  # hub
   gh
   tig
   tmux
+  reattach-to-user-namespace
 
-  # n
-  # node
-  # python
-  # rbenv
-  # ruby-build
+  node
+  python
+  rbenv
+  ruby-build
+
   asdf
+  elixir
+  default-jdk
 
   awscli
   heroku
@@ -33,6 +35,7 @@ brewbins=(
   autoconf
   automake
   coreutils
+  gpg
   openssl
   readline
   watchman
@@ -67,6 +70,16 @@ npm install -g ${npmbins[@]}
 
 echo "===> Installing manual-install binaries..."
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+echo "Remember to type leader + I to install tmux plugins"
+
+echo "===> Installing ASDF plugins..."
+asdf plugin-add erlang
+asdf plugin-add elixir
+asdf plugin-add nodejs
+
+~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+asdf install nodejs latest
+asdf reshim
 
 echo "===> Installing brew cask..."
 brew install caskroom/cask/brew-cask
@@ -115,7 +128,7 @@ echo "===> Setting up OSX..."
 ./osx-for-hackers.sh
 
 echo "===> Cloning dotfile config..."
-hub clone markalfred/dotfiles ~/Repos/dotfiles
+gh repo clone markalfred/dotfiles ~/Repos/dotfiles
 
 echo "===> Symlinking config files..."
 ~/Repos/dotfiles/create_symlinks.sh
@@ -124,8 +137,7 @@ echo "===> Setting fish as your shell..."
 sudo sh -c "echo '/usr/local/bin/fish' >> /etc/shells"
 chsh -s /usr/local/bin/fish
 
-echo "===> Paste package control install into Sublime console..."
-open "https://packagecontrol.io/installation"
-subl
+echo "===> Be sure to set fish color settings with..."
+echo "fish_config"
 
 echo "Done. Reboot, imo."
