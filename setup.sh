@@ -20,6 +20,7 @@ brewbins=(
   tmux
   reattach-to-user-namespace
 
+  n
   node
   python
   rbenv
@@ -27,7 +28,6 @@ brewbins=(
 
   asdf
   elixir
-  default-jdk
 
   awscli
   heroku
