@@ -49,9 +49,15 @@ brewbins=(
 echo "===> Installing brew binaries..."
 brew install ${brewbins[@]}
 
+echo "===> Installing ASDF plugins..."
+asdf plugin-add erlang
+asdf plugin-add elixir
+asdf plugin-add nodejs
+
+~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 echo "===> Grabbing latest Node..."
-n latest
-npm install -g npm
+asdf install nodejs latest
+asdf reshim
 
 npmbins=(
   babel-eslint
@@ -71,15 +77,6 @@ npm install -g ${npmbins[@]}
 echo "===> Installing manual-install binaries..."
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo "Remember to type leader + I to install tmux plugins"
-
-echo "===> Installing ASDF plugins..."
-asdf plugin-add erlang
-asdf plugin-add elixir
-asdf plugin-add nodejs
-
-~/.asdf/plugins/nodejs/bin/import-release-team-keyring
-asdf install nodejs latest
-asdf reshim
 
 echo "===> Installing brew cask..."
 brew install caskroom/cask/brew-cask
