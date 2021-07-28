@@ -49,7 +49,9 @@ brewbins=(
 echo "===> Installing brew binaries..."
 brew install ${brewbins[@]}
 
-echo "===> Installing ASDF plugins..."
+. $(brew --prefix asdf)/asdf.sh
+
+echo "===> Installing ASDF plugins..."]
 asdf plugin-add erlang
 asdf plugin-add elixir
 asdf plugin-add nodejs
