@@ -59,6 +59,7 @@ asdf plugin-add nodejs
 ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 echo "===> Grabbing latest Node..."
 asdf install nodejs latest
+asdf global nodejs latest
 asdf reshim
 
 npmbins=(
