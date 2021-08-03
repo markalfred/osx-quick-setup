@@ -82,8 +82,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo "Remember to type leader + I to install tmux plugins"
 
 echo "===> Installing brew cask..."
-brew install caskroom/cask/brew-cask
-brew tap caskroom/versions
+brew tap homebrew/cask
 
 # apps=(
 #   avocode
@@ -111,18 +110,13 @@ brew tap caskroom/versions
 # brew cask install --appdir="/Applications" ${apps[@]}
 
 echo "===> Installing fonts..."
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 
 fonts=(
-  font-anonymous-pro
-  font-cousine
   font-fira-code
-  font-lekton
-  font-open-sans
-  font-roboto
 )
 
-brew cask install ${fonts[@]}
+brew install ${fonts[@]}
 
 echo "===> Setting up OSX..."
 ./osx-for-hackers.sh
