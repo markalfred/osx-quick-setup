@@ -89,30 +89,24 @@ echo "Remember to type leader + I to install tmux plugins"
 echo "===> Installing brew cask..."
 brew tap homebrew/cask
 
-# apps=(
-#   avocode
-#   dash
-#   dropbox
-#   firefox
-#   flux
-#   google-chrome
-#   iterm2
-#   postgres
-#   sketch
-#   slack
-#   slate
-#   spotify
-#   sublime-text3
-#   torbrowser
-#   transmit
-#   vlc
-#   zeplin
-#   android-studio
-#   java
-# )
+apps=(
+  brave-browser
+  dash
+  dropbox
+  google-chrome
+  iterm2
+  postgres-unofficial
+  sketch
+  slack
+  slate
+  spotify
+  sublime-text
+  vlc
+  zeplin
+)
 
-# echo "===> Cask installing apps..."
-# brew cask install --appdir="/Applications" ${apps[@]}
+echo "===> Cask installing apps..."
+brew install --cask ${apps[@]}
 
 echo "===> Installing fonts..."
 brew tap homebrew/cask-fonts
