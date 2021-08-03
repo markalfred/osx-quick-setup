@@ -54,9 +54,18 @@ brew install ${brewbins[@]}
 . $(brew --prefix asdf)/asdf.sh
 
 echo "===> Installing ASDF plugins..."]
-asdf plugin-add erlang
-asdf plugin-add elixir
-asdf plugin-add nodejs
+asdfplugins=(
+  erlang
+  elixir
+  nodejs
+)
+for p in ${asdfplugins[@]}; do
+  if [[ $(asdf plugin list | grep $p) ]]; then
+    echo "$p already installed"
+  else
+    asdf plugin add $p
+  fi
+done
 
 ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 echo "===> Grabbing latest Node..."
@@ -83,7 +92,7 @@ echo "===> Installing manual-install binaries..."
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm 2>/dev/null || echo "TPM already installed"
 echo "Remember to type leader + I to install tmux plugins"
 
 echo "===> Installing brew cask..."
