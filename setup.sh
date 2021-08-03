@@ -122,7 +122,7 @@ echo "===> Setting up OSX..."
 ./osx-for-hackers.sh
 
 echo "===> Cloning dotfile config..."
-gh repo clone markalfred/dotfiles ~/Repos/dotfiles
+git clone git@github.com:markalfred/dotfiles ~/Repos/dotfiles
 
 echo "===> Symlinking config files..."
 ~/Repos/dotfiles/create_symlinks.sh
