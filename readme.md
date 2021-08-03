@@ -1,6 +1,6 @@
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/markalfred/osx-quick-setup/master/install.sh)"
 
-cd ~/Repos/osx-quick-install
+cd ~/Repos/osx-quick-setup
 ./setup.sh
 ```
