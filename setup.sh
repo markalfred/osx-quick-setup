@@ -78,6 +78,9 @@ echo "===> Installing NPM binaries..."
 npm install -g ${npmbins[@]}
 
 echo "===> Installing manual-install binaries..."
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo "Remember to type leader + I to install tmux plugins"
 
