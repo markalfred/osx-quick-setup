@@ -11,6 +11,8 @@ command -v brew >/dev/null 2>&1 || {
 brew doctor
 brew update
 
+brew tap heroku/brew
+
 brewbins=(
   fish
   direnv
