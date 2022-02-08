@@ -58,6 +58,7 @@ asdfplugins=(
   erlang
   elixir
   nodejs
+  golang
 )
 for p in ${asdfplugins[@]}; do
   if [[ $(asdf plugin list | grep $p) ]]; then
@@ -101,13 +102,15 @@ brew tap homebrew/cask
 apps=(
   brave-browser
   dash
+  discord
   dropbox
-  google-chrome
+  # google-chrome
   iterm2
+  keycastr
+  moom
   postgres-unofficial
   sketch
-  slack
-  slate
+  # slack
   spotify
   sublime-text
   vlc
@@ -136,8 +139,8 @@ echo "===> Symlinking config files..."
 ~/Repos/dotfiles/create_symlinks.sh
 
 echo "===> Setting fish as your shell..."
-sudo sh -c "echo '/usr/local/bin/fish' >> /etc/shells"
-chsh -s /usr/local/bin/fish
+sudo sh -c "(brew --prefix fish) >> /etc/shells"
+chsh -s /opt/homebrew/bin/fish
 
 echo "===> Be sure to set fish color settings with..."
 echo "fish_config"
