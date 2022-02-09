@@ -137,7 +137,7 @@ echo "===> Symlinking config files..."
 ~/Repos/dotfiles/create_symlinks.sh
 
 echo "===> Setting fish as your shell..."
-sudo sh -c "(brew --prefix fish) >> /etc/shells"
+sudo sh -c "/opt/homebrew/bin/fish >> /etc/shells"
 chsh -s /opt/homebrew/bin/fish
 
 echo "===> Be sure to set fish color settings with..."
