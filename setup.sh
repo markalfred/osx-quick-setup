@@ -93,7 +93,6 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm 2>/dev/null || echo "TPM already installed"
-echo "Remember to type leader + I to install tmux plugins"
 
 echo "===> Installing brew cask..."
 brew tap homebrew/cask
@@ -143,5 +142,7 @@ chsh -s /opt/homebrew/bin/fish
 
 echo "===> Be sure to set fish color settings with..."
 echo "fish_config"
+
+echo "Remember to type leader + I to install tmux plugins"
 
 echo "Done. Reboot, imo."
